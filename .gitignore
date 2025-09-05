@@ -1,0 +1,11 @@
+# data & artifacts
+data/processed/*
+models/*
+reports/*
+!reports/.gitkeep
+!models/.gitkeep
+!data/raw/.gitkeep
+
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
