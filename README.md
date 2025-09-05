@@ -8,8 +8,6 @@ Uçtan uca akış:
 ---
 
 ## 📂 Proje Yapısı
-
-
 sentiment-analysis-pipeline/
 ├─ data/
 │ ├─ raw/amazon_sample.csv # Örnek Türkçe veri (18 yorum)
@@ -24,7 +22,6 @@ sentiment-analysis-pipeline/
 │ ├─ evaluate.py # Değerlendirme (rapor/grafik)
 │ └─ infer.py # Tek cümle tahmini
 └─ requirements.txt
-
 
 ---
 
