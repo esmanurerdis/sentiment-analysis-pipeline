@@ -1,3 +1,34 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 README.md
 # 🇹🇷 Türkçe Duygu Analizi Pipeline  
 TF-IDF + Logistic Regression kullanarak **Türkçe ürün yorumlarını olumlu / olumsuz** olarak sınıflandırma.  
@@ -55,8 +86,12 @@ python src/infer.py
 CV F1 (macro): ~0.70 (küçük örnek veri ile)
 
 Holdout test seti küçüktür (4 cümle), bu yüzden metrikler oynaktır.
+```markdown
+## 📊 Sonuçlar
+- CV F1 (macro): ~0.70
+- Karışıklık matrisi:
 
-Karışıklık matrisi:
+![Confusion Matrix](reports/confusion_matrix.png)
 
 
 Not: Bu repo demo amaçlıdır. Daha büyük Türkçe yorum datasıyla sonuçlar ciddi şekilde iyileşir.
