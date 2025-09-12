@@ -32,11 +32,11 @@ python src/infer.py
 ```
 Results
 
-CV F1-macro: ~0.70 (small sample dataset)
+- CV F1-macro: ~0.70 (small sample dataset)
 
-Holdout test set is tiny (4 sentences), metrics may fluctuate
+- Holdout test set is tiny (4 sentences), metrics may fluctuate
 
-Confusion matrix is provided for visualization
+- Confusion matrix is provided for visualization
 
 ![Confusion Matrix](reports/confusion_matrix.png)
 
@@ -46,23 +46,23 @@ Confusion matrix is provided for visualization
 
 Technologies
 
-Python 🐍
+- Python 🐍
 
-scikit-learn (TF-IDF + Logistic Regression)
+- scikit-learn (TF-IDF + Logistic Regression)
 
-pandas, nltk, textblob (preprocessing)
+- pandas, nltk, textblob (preprocessing)
 
-matplotlib, seaborn (visualization)
+- matplotlib, seaborn (visualization)
 
 ---
 
 Future Improvements
 
-Expand dataset to improve performance
+- Expand dataset to improve performance
 
-Experiment with different algorithms (SVM, Random Forest, BERT)
+- Experiment with different algorithms (SVM, Random Forest, BERT)
 
-Add web interface (Streamlit / Gradio)
+- Add web interface (Streamlit / Gradio)
 
 
 ---
