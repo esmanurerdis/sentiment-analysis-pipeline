@@ -4,8 +4,6 @@ TF-IDF + Logistic Regression kullanarak Türkçe ürün yorumlarını olumlu / o
 Uçtan uca akış:
 Ön işleme → Model eğitimi → Değerlendirme → Tek cümle tahmini
 
-📂 Proje Yapısı
-sentiment-analysis-pipeline/ ├─ data/ │ ├─ raw/amazon_sample.csv # Örnek Türkçe veri (18 yorum) │ └─ processed/train_processed.csv # Ön işlenmiş veri ├─ models/best_model.joblib # Kaydedilen model ├─ reports/ │ ├─ metrics.json # Skorlar │ └─ confusion_matrix.png # Karışıklık matrisi ├─ src/ │ ├─ preprocess.py # Veri temizleme + ön işleme │ ├─ train.py # Model eğitimi │ ├─ evaluate.py # Değerlendirme (rapor/grafik) │ └─ infer.py # Tek cümle tahmini └─ requirements.txt
 
 - Karışıklık matrisi:
 
@@ -13,6 +11,21 @@ sentiment-analysis-pipeline/ ├─ data/ │ ├─ raw/amazon_sample.csv # Ör
 
 
 ```markdown
+
+sentiment-analysis-pipeline/
+├── data/
+│   ├── raw/amazon_sample.csv        # Örnek Türkçe veri (18 yorum)
+│   └── processed/train_processed.csv # Ön işlenmiş veri
+├── models/
+│   └── best_model.joblib            # Kaydedilen model
+├── reports/
+│   ├── metrics.json                 # Model skorları
+│   └── confusion_matrix.png         # Karışıklık matrisi
+├── src/
+├── .gitignore
+├── README.md
+└── requirements.txt
+
 
 ⚙️ Çalıştırma Adımları
 1️⃣ Ön işleme
