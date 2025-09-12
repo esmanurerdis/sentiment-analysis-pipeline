@@ -1,81 +1,79 @@
-🇹🇷 Türkçe Duygu Analizi Pipeline
-TF-IDF + Logistic Regression kullanarak Türkçe ürün yorumlarını olumlu / olumsuz olarak sınıflandırma.
+# Sentiment Analysis Pipeline (Turkish Product Reviews)
 
-Uçtan uca akış:
-Ön işleme → Model eğitimi → Değerlendirme → Tek cümle tahmini
+A complete NLP pipeline to classify Turkish product reviews as **positive** or **negative** using **TF-IDF + Logistic Regression**.
 
+## Pipeline Overview
+**Preprocessing → Model Training → Evaluation → Single Sentence Inference**
 
-- Karışıklık matrisi:
-
-![Confusion Matrix](reports/confusion_matrix.png)
-
-
-```markdown
-
+## Project Structure
 sentiment-analysis-pipeline/
 ├── data/
-│   ├── raw/amazon_sample.csv        # Örnek Türkçe veri (18 yorum)
-│   └── processed/train_processed.csv # Ön işlenmiş veri
+│   ├── raw/amazon_sample.csv        # Sample Turkish reviews (18 rows)
+│   └── processed/train_processed.csv # Preprocessed dataset
 ├── models/
-│   └── best_model.joblib            # Kaydedilen model
+│   └── best_model.joblib            # Trained model
 ├── reports/
-│   ├── metrics.json                 # Model skorları
-│   └── confusion_matrix.png         # Karışıklık matrisi
+│   ├── metrics.json                 # Model scores
+│   └── confusion_matrix.png         # Confusion matrix
 ├── src/
 ├── .gitignore
 ├── README.md
 └── requirements.txt
 
+## Usage
 
-⚙️ Çalıştırma Adımları
-1️⃣ Ön işleme
-
+1️⃣ **Preprocessing**
+```bash
 python src/preprocess.py --input data/raw/amazon_sample.csv --text-col text --label-col label
-
-
-2️⃣ Model eğitimi
-
 python src/train.py
-
-
-3️⃣ Değerlendirme
-
 python src/evaluate.py
-
-
-Rapor: reports/metrics.json
-
-Görsel: reports/confusion_matrix.png
-
-4️⃣ Tahmin (örnek cümleler)
-
 python src/infer.py
+```
+Results
 
-📊 Sonuçlar
+CV F1-macro: ~0.70 (small sample dataset)
 
-CV F1 (macro): ~0.70 (küçük örnek veri ile)
+Holdout test set is tiny (4 sentences), metrics may fluctuate
 
-Holdout test seti küçüktür (4 cümle), bu yüzden metrikler oynaktır.
+Confusion matrix is provided for visualization
 
-## 📊 Sonuçlar
-- CV F1 (macro): ~0.70
+![Confusion Matrix](reports/confusion_matrix.png)
 
-Not: Bu repo demo amaçlıdır. Daha büyük Türkçe yorum datasıyla sonuçlar ciddi şekilde iyileşir.
 
-🛠️ Kullanılan Teknolojiler
+---
+
+
+Technologies
 
 Python 🐍
 
 scikit-learn (TF-IDF + Logistic Regression)
 
-pandas, nltk, textblob (ön işleme)
+pandas, nltk, textblob (preprocessing)
 
-matplotlib, seaborn (görselleştirme)
+matplotlib, seaborn (visualization)
 
-✨ Katkılar
+---
 
-Veri seti genişletilerek performans artırılabilir.
+Future Improvements
 
-Farklı algoritmalar (SVM, RandomForest, BERT) denenebilir.
+Expand dataset to improve performance
 
-Streamlit/Gradio ile arayüz eklenebilir.
+Experiment with different algorithms (SVM, Random Forest, BERT)
+
+Add web interface (Streamlit / Gradio)
+
+
+---
+
+ Türkçe Özet 
+
+```markdown
+## Türkçe Özet
+Bu proje, Türkçe ürün yorumlarını olumlu veya olumsuz olarak sınıflandıran uçtan uca bir NLP pipeline’ıdır.  
+- Ön işleme: metin temizleme, stopwords temizleme, lemmatization  
+- Özellik çıkarımı: TF-IDF  
+- Model: Logistic Regression  
+- Değerlendirme: 5-fold cross-validation (F1-macro) ve holdout test seti  
+- Tek cümle tahmini yapılabilir (inference)
+
