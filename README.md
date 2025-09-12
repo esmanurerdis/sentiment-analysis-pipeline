@@ -7,6 +7,13 @@ Uçtan uca akış:
 📂 Proje Yapısı
 sentiment-analysis-pipeline/ ├─ data/ │ ├─ raw/amazon_sample.csv # Örnek Türkçe veri (18 yorum) │ └─ processed/train_processed.csv # Ön işlenmiş veri ├─ models/best_model.joblib # Kaydedilen model ├─ reports/ │ ├─ metrics.json # Skorlar │ └─ confusion_matrix.png # Karışıklık matrisi ├─ src/ │ ├─ preprocess.py # Veri temizleme + ön işleme │ ├─ train.py # Model eğitimi │ ├─ evaluate.py # Değerlendirme (rapor/grafik) │ └─ infer.py # Tek cümle tahmini └─ requirements.txt
 
+- Karışıklık matrisi:
+
+![Confusion Matrix](reports/confusion_matrix.png)
+
+
+```markdown
+
 ⚙️ Çalıştırma Adımları
 1️⃣ Ön işleme
 
@@ -36,13 +43,9 @@ python src/infer.py
 CV F1 (macro): ~0.70 (küçük örnek veri ile)
 
 Holdout test seti küçüktür (4 cümle), bu yüzden metrikler oynaktır.
-```markdown
+
 ## 📊 Sonuçlar
 - CV F1 (macro): ~0.70
-- Karışıklık matrisi:
-
-![Confusion Matrix](reports/confusion_matrix.png)
-
 
 Not: Bu repo demo amaçlıdır. Daha büyük Türkçe yorum datasıyla sonuçlar ciddi şekilde iyileşir.
 
