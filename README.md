@@ -6,6 +6,7 @@ A complete NLP pipeline to classify Turkish product reviews as **positive** or *
 **Preprocessing → Model Training → Evaluation → Single Sentence Inference**
 
 ## Project Structure
+```bash
 sentiment-analysis-pipeline/
 ├── data/
 │   ├── raw/amazon_sample.csv        # Sample Turkish reviews (18 rows)
@@ -19,7 +20,7 @@ sentiment-analysis-pipeline/
 ├── .gitignore
 ├── README.md
 └── requirements.txt
-
+```
 ## Usage
 
 1️⃣ **Preprocessing**
