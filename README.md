@@ -67,9 +67,6 @@ Future Improvements
 
 ---
 
- Türkçe Özet 
-
-```markdown
 ## Türkçe Özet
 Bu proje, Türkçe ürün yorumlarını olumlu veya olumsuz olarak sınıflandıran uçtan uca bir NLP pipeline’ıdır.  
 - Ön işleme: metin temizleme, stopwords temizleme, lemmatization  
